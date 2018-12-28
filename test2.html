@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Doucment</title>
+        <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+    </head>
+
+    <body>
+        <div id="div1">
+            <a href="#">a1</a>
+            <a href="#">a2</a>
+            <a href="#">a3</a>
+            <a href="#">a4</a>
+            <a href="#">a5</a>
+        </div>
+        <script>
+            // var div1 = document.getElementById('div1')
+            // div1.addEventListener('click', function (e) {
+            //     var target = e.target
+            //     if (target.nodeName === 'A') {
+            //         alert(target.innerHTML)
+            //     }
+            // })
+            
+            // $('#div1').click(function () {
+            //     var _this = this
+            //     setTimeout(function () {
+            //         $(_this).css('background-color', 'yellow')
+            //     }, 1000)
+            // })
+
+            // $('#div1').click(function () {
+            //     var fn = function () {
+            //         $(this).css('background-color', 'yellow')
+            //     }
+            //     fn = $.proxy(fn, this)
+            //     setTimeout(fn, 1000)
+            // })
+
+            $('#div1').click(function () {
+                setTimeout($.proxy(function () {
+                    $(this).css('background-color', 'yellow')
+                }, this), 1000)
+            })
+        </script>
+    </body>
+</html>

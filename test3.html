@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Doucment</title>
+        <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+    </head>
+
+    <body>
+        <div id="div1">
+            <a href="#">a1</a>
+            <a href="#">a2</a>
+            <a href="#">a3</a>
+            <a href="#">a4</a>
+            <a href="#">a5</a>
+        </div>
+        <script>
+            var callbacks = $.Callbacks()
+            callbacks.add(function (info) {
+                console.log(info)
+            })
+            callbacks.fire('123')
+        </script>
+    </body>
+</html>
