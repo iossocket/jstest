@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Doucment</title>
+        <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+    </head>
+
+    <body>
+        <div id="div1">
+            <a href="#">a1</a>
+            <a href="#">a2</a>
+            <a href="#">a3</a>
+            <a href="#">a4</a>
+            <a href="#">a5</a>
+        </div>
+        <script>
+            var arr = [1, 2, 3]
+            var nodeList = document.getElementsByTagName('a')
+            var $a = $('a')
+
+            // arr.forEach(item => {
+            //     console.log(item)
+            // })
+
+            // var i, length = nodeList.length
+            // for (i = 0; i < length; i++) {
+            //     console.log(nodeList[i])
+            // }
+
+            // $a.each((key, elem) => {
+            //     console.log(key, elem)
+            // })
+
+            function each(data) {
+                var $data = $(data) // 生产迭代器
+                $data.each((key, value) => {
+                    console.log(key, value)
+                })
+            }
+
+            each(arr)
+            each(nodeList)
+            each($a)
+        </script>
+    </body>
+</html>
